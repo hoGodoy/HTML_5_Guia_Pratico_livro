@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 - LIVRO</title>
+    <script type="text/javascript">
+        function atualizarNomeArquivo (caminho) {
+            document.getElementById("imagem").src =caminho;
+        }
+    </script>
+</head>
+<body>
+    <form id: quadroExemplo>
+        <p><label>Nome: </label></p>
+    </form>
+    <form id: quadroExemplo>
+        <p>
+            <label>
+                Nome: <input><!--Elemento input dentro do elemento label-->   
+            </label>
+        </p>
+    </form>
+    <form id: quadroExemplo>
+        <p>
+            <label for="nome">
+                Nome: 
+            </label>
+            <input id="nome"> <!--Elemento input relacionado a label pelo id e for-->
+        </p>
+    </form>
+    <form>
+        <p><label>Telefone: <input type="tel" required placeholder="(XX) XXXX-XXXX" pattern="^\(?\d{2}\)\d{4}[-\s]\d{4}.*?$"></label></p>
+    </form>
+    <form>
+        <p><label>E-mail: <input type="email" required placeholder="nome@domínio.com.br"></label></p>
+    </form>
+    <form>
+        <p><label>Site: <input type="url>"></label></p>
+    </form>
+    <form>
+        <p><label>Nota: <input type="number" name="nota" placeholder="10" min="0" max="10" step="0.5"></label></p>
+    </form>
+    <form>
+        <p><label>Iluminação: <input type="range" name="volume" min="0" max="100" step="5"></label></p>
+    </form>
+    <form>
+        <p><label>Data: <input type="date" name="data"></label></p>
+    </form>
+    <form>
+        <p><label>Mês: <input type="month" name="mes"></label></p>
+    </form>
+    <form>
+        <p><label>Semana: <input type="week" name="semana"></label></p>
+    </form>
+    <form>
+        <p><label>Hora: <input type="time" name="hora"></label></p>
+    </form>
+    <form>
+        <p><label>Data e hora: <input type="datetime" name="datahora"></label></p>
+    </form>
+    <form>
+        <p><label>Data e hora local <input type="datetime-local" name="datahoralocal"></label></p>
+    </form>
+    <form>
+        <p><label>Tempo de entrega do Produto: <input type="time" min="19:00" max="23:00" step="300"></label></p>
+        <!--O time aqui é em segundos, step de 300 vai de 5 em 5 minutos-->
+    </form>
+    <form>
+        <p><label>Data: <input type="date" min="1984-01-16" max="2084-01-16" value="2020-01-03"></label></p>
+    </form>
+    <form>
+        <input type="hidden" name="formulario" value="contato">
+        <!--Esse valor não aparece na tela para o usuário, ele serve pra informar ao servidor que o formulário é de contato-->
+    </form>
+    <form>
+        <p><label>Senha: <input type="password" name="senha"></label></p>
+    </form>
+    <form>
+        <p><input type="file" name="imagem" accept="image/*" onchange="atualizarNomeArquivo(this.value)"></p>
+    </form>
+    <fieldset>
+        <legend>Estado civil: </legend>
+        <p><label><input type="radio" name="est_civ" value="Casadx">Casadx</label></p>
+        <p><label><input type="radio" name="est_civ" value="Solteirx">Solteirx</label></p>
+        <p><label><input type="radio" name="est_civ" value="Divorciadx">Divorciadx</label></p>
+        <p><label><input type="radio" name="est_civ" value="Viuvx">Viuvx</label></p>
+        <p><label><input type="radio" name="est_civ" value="Outrx">Outrx</label></p>
+    </fieldset>
+    <fieldset>
+        <legend>Itens da sua compra</legend>
+        <p><label><input type="checkbox" name="computador" value="Computador">Computador</label></p>
+        <p><label><input type="checkbox" name="impressora" value="Impressora">Impressora</label></p>
+        <p><label><input type="checkbox" name="monitor" value="Monitor">Monitor</label></p>
+    </fieldset>
+    <p><label>O que deseja pesquisar? <input type="search" name="Pesquisa"></label></p>
+    <p><label>Cor: <input type="color" name="cor"></label></p>
+    <p><label>Escolha uma cor: <input id="cor" type="color" onchange="document.getElementById('cor_selecionada').value = document.getElementById('cor').value;"/></label></p>
+    <p><label>Cor selecionada: <input id="cor_selecionada" type="text"/></label></p>
+    <p><button type="button">Clique aqui</button></p>
+    <p><button type="button"><img src="cranio.png" alt="Moeda" width="40"></button></p>
+    <form name="formulario1" action="teste1.jsp" method="POST">
+        <p><label>Nome: <input type="text" name="pnome1"></label></p>
+        <p>
+            <button type="button" onclick="alert('Botão clicado.')">
+                Clique aqui
+            </button>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </p>
+    </form>
+
+</body>
+</html>

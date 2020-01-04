@@ -1,0 +1,14 @@
+** Para entender melhor como receber os dados do formula´rio e manipula´-los em banco de dados, 
+sugere-se a leitura do livro “Web Total: Desenvolva Sites com Tecnologias de Uso Livre: Pra´tico & Avanc¸ado”, 
+do mesmo autor, pu- blicado pela Editora E´rica em 2009
+
+Capítulo 2 - Formulários
+
+O tipo de entrada do dado em um formulário é definido no elemento <input> por meio do atributo type.
+
+Tipos: email tel url number range date month week time datetime datetime-local search color.
+
+Elementos: <input>, <button>, <textarea>, <legend>, <label>, <fieldset>, <datalist>, <keygen>, 
+<output>, <select>, <option>, <optgroup>
+
+ 
