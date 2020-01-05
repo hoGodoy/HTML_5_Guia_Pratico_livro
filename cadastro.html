@@ -13,6 +13,11 @@
                 document.formulario.pnome.focus ();
             }
         }
+        function calcular() {
+            a=document.getElementById("valor1").value;
+            b=document.getElementById("valor2").value;
+            document.getElementById("resultado").value=Number(a)*Number(b);
+        }
     </script>
 </head>
 <body>
@@ -24,6 +29,18 @@
         <input type="reset" value="Limpar">
         <input type="button" value="Validar nome" onClick="validar();">
         </p>
+    </form>
+    <p>Multiplicação de dois valores: Exemplo 1 </p>
+    <form onsubmit="return false;" oninput="calcular()">
+        <input id="valor1" type="number"> *
+        <input id="valor2" type="number"> =
+        <output id="resultado"></output>    
+    </form>
+    <p>Divisão de dois valores: Exemplo 2</p>
+    <form onsubmit="return false;" oninput="resultado.value = valor3.valueAsNumber / valor4.valueAsNumber">
+        <input name="valor3" type="number"> /
+        <input name="valor4" type="number"> =
+        <output name="resultado"></output>
     </form>
 </body>
 </html>

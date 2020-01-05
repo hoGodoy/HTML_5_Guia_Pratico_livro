@@ -110,6 +110,75 @@
             <button type="reset">Limpar</button>
         </p>
     </form>
+    <p><label>Deixe sua sugestão: <br><textarea cols="30" rows="5"></textarea></label></p>
+    <fieldset>
+        <legend>Dados pessoais</legend>
+        <p><label>Nome: <input type="text"></label></p>
+        <p><label>E-mail: <input type="email"></label></p>
+        <p><label>Data de nascimento: <input type="date"></label></p>
+        <p><label>Site: <input type="url" list="sites" name="link"></label></p>
+        <datalist id="sites">
+            <option label="Ig" value="http://www.ig.com.br"></option>
+            <option label="Google" value="http://www.google.com.br"></option>
+            <option label="Microsoft" value="http://www.microsoft.com.br"></option>
+        </datalist>
+    </fieldset>
+    <form action="recebe.jsp" method="post" enctype="multipart/form-data">
+        <!--action define o nome do arquivo que receberá os dados no servidor ou ma nova página, pode ser usado em scripts-->
+        <p><label>Usuário: <input type="text" name:"usuario"></label></p>
+        <p><label>Senha: <input type="password" name:"senha"></label></p>
+        <p><label>Criptogarfia:<keygen name:"chave"></label></p>
+        <p><input type="submit" value="Entrar"></p>     
+    </form>
+    <p><label>Carro:
+        <Select name="carros" required="required">
+            <optgroup label="1 Esportivos">
+                <option value="1.1">Ferrari
+                <option value="1.2">Porche
+                <option value="1.3">Lamborghini
+            <optgroup label="2 Popular">
+                <option value="2.1">Corsa
+                <option value="2.2">Uno
+                <option value="2.3">Gol
+                <option value="2.4">Palio
+        </Select>
+    </label>
+    </p>
+    <form >
+    <p>Validação de e-mail <br><label> E-mail: <input type="text" pattern="^[a-zA-Z0-9_\.-]{2,}@([A-Za-z0-9_-]{2,}\.)+[A-Za-z]{2,4}$"></label>
+        <button type="submit">Enviar</button>
+    </p>
+    </form>
+    <form>
+        <p>Validação de entrada de números positivos</p>
+        <p><label><input type="text" pattern="^\d{0,}$"></label>
+            <button type="submit">Enviar</button></p>
+    </form>
+    <form>
+        <p>Validação de telefone<br><label>Telefone: <input type="tel" placeholder="(NN) NNNN-NNNN" pattern="^\(?\d{2}\)\d{4}[-\s]\d{4}$"</label>
+            <button type="submit">Enviar</button></p>
+    </form>
+    <form>
+        <P>Validação de CPF<br><label>CPF forma 1: <input type="text" placeholder="NNNNNNNNNNN" pattern="[0-9]{11}" name="CPF"required></label>
+            <button type="submit">Enviar</button></p>
+        </P>
+    </form>
+    <form>
+        <P>Validação de CPF<br><label>CPF forma 2: <input type="text" placeholder="NNN.NNN.NNN-NN" pattern="“^\d{3}\.\d{3}\.\d{3}-\d{2}$" name="CPF"required></label>
+            <button type="submit">Enviar</button></p>
+        </P>
+    </form>
+    <form>
+        <p><label>Salário: <br><input type="text" pattern="^[-+]?\d{1,3}(\.\d{3})*,\d{2}$"></label>
+            <button type="submit">Enviar</button></p>
+    </form>
+    <p><label>Nome: <input type="text" placeholder="Digite seu nome aqui" autofocus autocomplete="on" accept-charset="ISO-8859-1"></label></p>
+    <p>Digite sua sugestão: <br><textarea cols="40" rows="5" maxlength="100"></textarea></p>
+    <!--accept-charset determina a codificação de caracteres que serão utilizados na submissão do formulário ao servidor-->
+    <!--Maxlenght limita a quantidade de caracteres que podem ser escritos, independente do tamanho do espaço-->
 
+    <form action="recebe.jsp" method="GET" enctype="multipart/form-data" accept="image/gif, image/jpeg">
+    <p>Escolha o arquivo<br><input type="file" name="arquivo">
+        <button type="submit">Enviar</button></p></p></form>
 </body>
 </html>
