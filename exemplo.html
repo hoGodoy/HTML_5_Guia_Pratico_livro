@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Exemplo de Menu com javascript</title>
+    <script type="text/javascript">
+        function novo () {
+            document.formulario.opcao.value="novo";
+            document.formulario.submit();
+        }
+        function salvar () {
+            document.formulario.opcao.value="Salvar";
+            document.formulario.submit();
+        }
+        function alterar () {
+            document.formulario.opcao.value="alterar";
+            document.formulario.submit();
+        }
+        function consultar () {
+            document.formulario.opcao.value="consultar";
+            document.formulario.submit();
+        }
+        function excluir () {
+            document.formulario.opcao.value="excluir";
+            document.formulario.submit();
+        }
+        function listar () {
+            document.formulario.opcao.value="listar";
+            document.formulario.submit();
+        }
+    </script>
+    <style type="text/css">
+        body{text-align: center;}
+        input{
+            background-color: #336699;
+            color: #ffffff;
+            font-family: tahoma;
+            font-size: 15px;
+            width: 120px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <form name="formulario" action="recebe.jsp" method="POST">
+        <p>
+            <input type="button" value="novo" title="Novo cliente" onclick="novo ();">
+            <input type="button" value="Salvar" title="Grava dados do cliente" onclick="salvar ();">
+            <input type="button" value="Alterar" title="Altera dados do cliente" onclick="alterar ();">
+            <input type="button" value="Consultar" title="Consulta dados do cliente" onclick="consulta ();">
+            <input type="button" value="Excluir" title="Exclui dados do cliente" onclick="exclui ();">
+            <input type="button" value="Listar" title="Lista todos os clientes" onclick="listar ();">
+            <input type="hidden" name="menu" value="clientes">
+            <input type="hidden" name="opcao" value="">
+        </p>
+    </form>
+</body>
+</html>

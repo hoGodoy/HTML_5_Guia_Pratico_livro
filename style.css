@@ -1,12 +1,36 @@
-body {
-    background-color: black;
-}
-h1 {
-    color: white;
-    text-align: center;
-}
-p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(20, 20, 68);
-}
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
+body {
+    background-color: rgba(0, 0, 0, 0.747);
+    width: 900px;
+    margin: 10%;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    text-shadow: 1px 1px  rgba(29, 29, 29, 0.692);
+}
+form, label {
+    width: 380px;
+    min-height: 50px;
+    background-color: rgba(51, 51, 51, 0.692);
+    padding: 6px;
+    margin: 12px;
+    border-radius: 6px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.856);
+}
+fieldset {
+    width: 340px;
+    min-height: 50px;
+    background-color: rgba(51, 51, 51, 0.692);
+    padding: 6px;
+    margin: 12px;
+    border-radius: 6px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.856);
+}
+#form_grande > form{
+    width: 900px;
+}
+.campo {
+    background-color:#336699;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+}
