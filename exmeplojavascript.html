@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html";>
+    <title>Atributo ID com Javascript</title>
+    <script type="text/javascript">
+        function aumentar () {
+            var t = document.getElementById('texto');
+            if (t.style.fontSize==""){
+                t.style.fontSize="12px";
+            }   else if(t.style.fontSize=="12px") {
+                t.style.fontSize="14px";
+            }   else if(t.style.fontSize=="14px"){
+                t.style.fontSize="16px";
+            }   else if(t.style.fontSize=="16px"){
+                t.style.fontSize="18px";
+            }   else if(t.style.fontSize=="18px"){
+                t.style.fontSize="20px";
+            }
+        }
+        function diminuir () {
+            var t = document.getElementById('texto');
+            if(t.style.fontSize==""){
+                t.style.fontSize="12px";
+            }   else if(t.style.fontSize=="20px"){
+                t.style.fontSize="18px";
+            }   else if(t.style.fontSize=="18px"){
+                t.style.fontSize="16px";
+            }   else if(t.style.fontSize=="16px"){
+                t.style.fontSize="14px";
+            }   else if(t.style.fontSize=="14px"){
+                t.style.fontSize="12px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <a href="javascript:aumentar()" style="font-size:30px;color:#000000;text-decoration:none;width: 15px;">
+        A</a>
+        <a href="javascript:diminuir()" style="font-size:15px;color:#000000;text-decoration:none;width: 15px;">
+        A</a>
+    </p>
+    <p id="texto" style="font-size: 12px">
+        O preço médio da gasolina, que tem 25% de etanol anidro em sua composição, é de 2,813 por litro entre 22 e 28 de maio, recuo de 1,68% em relação à semana anterior
+    </p>
+</body>
+</html>

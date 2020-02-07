@@ -117,15 +117,16 @@
     <p><label>Deixe sua sugestão: <textarea cols="30" rows="5"></textarea></label></p>
     <fieldset>
         <legend>Dados pessoais</legend>
-        <p><label>Nome: <input type="text"></label></p>
-        <p><label>E-mail: <input type="email"></label></p>
-        <p><label>Data de nascimento: <input type="date"></label></p>
-        <p><label>Site: <input type="url" list="sites" name="link"></label></p>
+        <p><label>Nome: <input type="text" accesskey="n"></label></p>
+        <p><label>E-mail: <input type="email" accesskey="e"></label></p>
+        <p><label>Data de nascimento: <input type="date" accesskey="n"></label></p>
+        <p><label>Site: <input type="url" list="sites" name="link" accesskey="s"></label></p>
         <datalist id="sites">
             <option label="Ig" value="http://www.ig.com.br"></option>
             <option label="Google" value="http://www.google.com.br"></option>
             <option label="Microsoft" value="http://www.microsoft.com.br"></option>
         </datalist>
+        <p>Atributo accesskey, ao clicar a tecla ALT + n, será selecionado o campo nome,<br>ALT + 'e' -> e-mail,<br>ALT + 'n' -> Data de nascimento,</p>
     </fieldset>
     <form action="recebe.jsp" method="post" enctype="multipart/form-data">
         <!--action define o nome do arquivo que receberá os dados no servidor ou ma nova página, pode ser usado em scripts-->
@@ -452,6 +453,12 @@
         <legend>Formulário 13</legend>
         <p><label>Nome: <input type="text" onselect="teste13 ();"></label></p>
         <p><label>Cidade: <input type="text"></label></p>
-    </form> 
+    </form>
+    <form>
+        <legend>Formulário 14</legend>
+        <p><label>Atributo Lang: Declare o idioma principal utilizado na página (ISO-639-1)</label></p>
+        <p>Declare no interior da tag html</p>
+    </form>
+
 </body>
 </html>
