@@ -3,462 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 - LIVRO</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <script type="text/javascript">
-        function atualizarNomeArquivo (caminho) {
-            document.getElementById("imagem").src =caminho;
-        }
-    </script>
+    <title>Capitulo - 2</title>
 </head>
 <body>
-
-    <h1>Hélton Godoy - nosso primeiro site</h1>
-    <form id: quadroExemplo>
-        <p><label>Nome: </label></p>
-    </form>
-    <form id: quadroExemplo>
-        <p>
-            <label>
-                Nome: <input><!--Elemento input dentro do elemento label-->   
-            </label>
-        </p>
-    </form>
-    <form id: quadroExemplo>
-        <p>
-            <label for="nome">
-                Nome: 
-            </label>
-            <input id="nome" tabindex="1"> <!--Elemento input relacionado a label pelo id e for-->
-        </p>
-        <p>Tabindex 1</p>
-    </form>
-    <form>
-        <p><label>Telefone: <input type="tel" required placeholder="(XX) XXXX-XXXX" pattern="^\(?\d{2}\)\d{4}[-\s]\d{4}.*?$"></label></p>
-    </form>
-    <form>
-        <p><label>E-mail: <input type="email" required placeholder="nome@domínio.com.br"></label></p>
-    </form>
-    <form>
-        <p><label>Site: <input type="url>"></label></p>
-    </form>
-    <form>
-        <p><label>Nota: <input type="number" name="nota" placeholder="10" min="0" max="10" step="0.5"></label></p>
-    </form>
-    <form>
-        <p><label>Iluminação: <input type="range" name="volume" min="0" max="100" step="5"></label></p>
-    </form>
-    <form>
-        <p><label>Data: <input type="date" name="data"></label></p>
-    </form>
-    <form>
-        <p><label>Mês: <input type="month" name="mes"></label></p>
-    </form>
-    <form>
-        <p><label>Semana: <input type="week" name="semana"></label></p>
-    </form>
-    <form>
-        <p><label>Hora: <input type="time" name="hora"></label></p>
-    </form>
-    <form>
-        <p><label>Data e hora: <input type="datetime" name="datahora"></label></p>
-    </form>
-    <form>
-        <p><label>Data e hora local <input type="datetime-local" name="datahoralocal"></label></p>
-    </form>
-    <form>
-        <p><label>Tempo de entrega do Produto: <input type="time" min="19:00" max="23:00" step="300"></label></p>
-        <!--O time aqui é em segundos, step de 300 vai de 5 em 5 minutos-->
-    </form>
-    <form>
-        <p><label>Data: <input type="date" min="1984-01-16" max="2084-01-16" value="2020-01-03"></label></p>
-    </form>
-    <form>
-        <input type="hidden" name="formulario" value="contato">
-        <!--Esse valor não aparece na tela para o usuário, ele serve pra informar ao servidor que o formulário é de contato-->
-    </form>
-    <form>
-        <p><label>Senha: <input type="password" name="senha"></label></p>
-    </form>
-    <form>
-        <p><input type="file" name="imagem" accept="image/*" onchange="atualizarNomeArquivo(this.value)"></p>
-    </form>
-    <fieldset>
-        <legend>Estado civil: </legend>
-        <p><label><input type="radio" name="est_civ" value="Casadx">Casadx</label></p>
-        <p><label><input type="radio" name="est_civ" value="Solteirx">Solteirx</label></p>
-        <p><label><input type="radio" name="est_civ" value="Divorciadx">Divorciadx</label></p>
-        <p><label><input type="radio" name="est_civ" value="Viuvx">Viuvx</label></p>
-        <p><label><input type="radio" name="est_civ" value="Outrx">Outrx</label></p>
-    </fieldset>
-    <fieldset>
-        <legend>Itens da sua compra</legend>
-        <p><label><input type="checkbox" name="computador" value="Computador">Computador</label></p>
-        <p><label><input type="checkbox" name="impressora" value="Impressora">Impressora</label></p>
-        <p><label><input type="checkbox" name="monitor" value="Monitor">Monitor</label></p>
-    </fieldset>
-    <p><label>O que deseja pesquisar? <input type="search" name="Pesquisa"></label></p>
-    <p><label>Cor: <input type="color" name="cor"></label></p>
-    <p><label>Escolha uma cor: <input id="cor" type="color" onchange="document.getElementById('cor_selecionada').value = document.getElementById('cor').value;"/></label></p>
-    <p><label>Cor selecionada: <input id="cor_selecionada" type="text"/></label></p>
-    <p><button type="button">Clique aqui</button></p>
-    <p><button type="button"><img src="cranio.png" alt="Moeda" width="40"></button></p>
-    <form name="formulario1" action="teste1.jsp" method="POST">
-        <p><label>Nome: <input type="text" name="pnome1"></label></p>
-        <p>
-            <button type="button" onclick="alert('Botão clicado.')">
-                Clique aqui
-            </button>
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpar</button>
-        </p>
-    </form>
-    <p><label>Deixe sua sugestão: <textarea cols="30" rows="5"></textarea></label></p>
-    <fieldset>
-        <legend>Dados pessoais</legend>
-        <p><label>Nome: <input type="text" accesskey="n"></label></p>
-        <p><label>E-mail: <input type="email" accesskey="e"></label></p>
-        <p><label>Data de nascimento: <input type="date" accesskey="n"></label></p>
-        <p><label>Site: <input type="url" list="sites" name="link" accesskey="s"></label></p>
-        <datalist id="sites">
-            <option label="Ig" value="http://www.ig.com.br"></option>
-            <option label="Google" value="http://www.google.com.br"></option>
-            <option label="Microsoft" value="http://www.microsoft.com.br"></option>
-        </datalist>
-        <p>Atributo accesskey, ao clicar a tecla ALT + n, será selecionado o campo nome,<br>ALT + 'e' -> e-mail,<br>ALT + 'n' -> Data de nascimento,</p>
-    </fieldset>
-    <form action="recebe.jsp" method="post" enctype="multipart/form-data">
-        <!--action define o nome do arquivo que receberá os dados no servidor ou ma nova página, pode ser usado em scripts-->
-        <p><label>Usuário: <input type="text" name:"usuario"></label></p>
-        <p><label>Senha: <input type="password" name:"senha"></label></p>
-        <p><label>Criptogarfia:<keygen name:"chave"></label></p>
-        <p><input type="submit" value="Entrar"></p>     
-    </form>
-    <p><label>Carro:
-        <Select name="carros" required="required">
-            <optgroup label="1 Esportivos">
-                <option value="1.1">Ferrari
-                <option value="1.2">Porche
-                <option value="1.3">Lamborghini
-            <optgroup label="2 Popular">
-                <option value="2.1">Corsa
-                <option value="2.2">Uno
-                <option value="2.3">Gol
-                <option value="2.4">Palio
-        </Select>
-    </label>
-    </p>
-    <form >
-    <p>Validação de e-mail <br><label> E-mail: <input type="text" pattern="^[a-zA-Z0-9_\.-]{2,}@([A-Za-z0-9_-]{2,}\.)+[A-Za-z]{2,4}$"></label>
-        <button type="submit">Enviar</button>
-    </p>
-    </form>
-    <form>
-        <p>Validação de entrada de números positivos</p>
-        <p><label><input type="text" pattern="^\d{0,}$"></label>
-            <button type="submit">Enviar</button></p>
-    </form>
-    <form>
-        <p>Validação de telefone<br><label>Telefone: <input type="tel" placeholder="(NN) NNNN-NNNN" pattern="^\(?\d{2}\)\d{4}[-\s]\d{4}$"</label>
-            <button type="submit">Enviar</button></p>
-    </form>
-    <form>
-        <P>Validação de CPF<br><label>CPF forma 1: <input type="text" placeholder="NNNNNNNNNNN" pattern="[0-9]{11}" name="CPF"required></label>
-            <button type="submit">Enviar</button></p>
-        </P>
-    </form>
-    <form>
-        <P>Validação de CPF<br><label>CPF forma 2: <input type="text" placeholder="NNN.NNN.NNN-NN" pattern="“^\d{3}\.\d{3}\.\d{3}-\d{2}$" name="CPF"required></label>
-            <button type="submit">Enviar</button></p>
-        </P>
-    </form>
-    <form>
-        <p><label>Salário: <br><input type="text" pattern="^[-+]?\d{1,3}(\.\d{3})*,\d{2}$"></label>
-            <button type="submit">Enviar</button></p>
-    </form>
-    <p><label>Nome: <input type="text" placeholder="Digite seu nome aqui" autofocus autocomplete="on" accept-charset="ISO-8859-1"></label></p>
-    <p>Digite sua sugestão: <br><textarea cols="40" rows="5" maxlength="100"></textarea></p>
-    <!--accept-charset determina a codificação de caracteres que serão utilizados na submissão do formulário ao servidor-->
-    <!--Maxlenght limita a quantidade de caracteres que podem ser escritos, independente do tamanho do espaço-->
-
-    <form action="recebe.jsp" method="GET" enctype="multipart/form-data" accept="image/gif, image/jpeg">
-    <p>Escolha o arquivo<br><input type="file" name="arquivo">
-        <button type="submit">Enviar</button></p></form>
-
-    <form action="recebe.jsp" method="get">
-        <p>Escolha o arquivo<label><input type="file" name="img" multiple="multiple"></label></p>
-        <p><input type="submit" value="Enviar"></p>
-        <p>Nesse modo o cliente pode enviar vários arquivos ao mesmo tempo</p>
-    </form>
-    <form action="recebe.jsp" method="GET">
-        <p><label><input type="file" name="imagem" accept="image/gif, image/jpeg"></label></p>
-        <p><input type="submit" value="Enviar"></p>
-        <p>Esse input contém um accept para arquivos do tipo gif ou jpeg</p>
-    </form>
-    <form action="recebe.jsp" method="GET">
-        <p><label>Nome: <input type="text" name="nome"></label></p>
-        <p><input type="image" src="botao.png" alt="Enviar" align="right" width="50px"></p>
-        <p>Botão alinhado a direita e width de 50px, alt para possibilidade de não carregamento da img ou leitura de cegos</p>
-    </form>
-    <form>
-        <fieldset>
-            <legend>Estado civil</legend>
-        <p><label><input type="radio" name="Est_civ" value="casado">Casadx</label></p>
-        <p><label><input type="radio" name="Est_civ" checked value="solteiro">Solteirx</label></p>
-        <p>Esse fildset contém está setado pra carregar automaticamente em solterio</p>
-        </fieldset>
-    </form>
-    <form action="recebe.jsp" method="GET">
-        <p><label>Nome: <input type="text" name="nome"></label></p>
-        <P><label>Telefone: <input type="tel" name="telefone" disabled></label></P>
-        <p><label><input type="submit" value="Enviar"></label></p>
-        <p>Esse formulário não permite alterar dados do campo Tel, está setado como disabled. Há uma label no botão enviar.</p>
-    </form>
-    <form name="formulario" action="recebe.jsp" method="GET">
-        <p><label>Nome: <input type="text" name="nome"></label></p>
-        <p><label>Telefone: <input type="tel" name="telefone"></label></p>
-        <p><input type="submit" value="enviar" name="botao"></p>
-        <p>No exemplo, no arquivo recebe.jsp, que recebe os dados do formulário no servidor, o conteú- do dos campos nomeados como “nome” e “telefone” pode ser recuperado para, por exemplo, ser armazenado em um banco de dados.</p>
-        <P>Para recuperar esses dados, no arquivo recebe.jsp (que é um arquivo JavaServer Pages) deve ser utilizado o seguinte scriptlet Java:</P>
+    <h1>Capítulo 2 - Formulários</h1>
+    <h3>Tipos de dados de entrada na HTML 5</h3>
+    <UL>
+        <LI>E-mail</LI>
+        <LI>Tel</LI>
+        <LI>URL</LI>
+        <LI>Number</LI>
+        <LI>Range</LI>
+        <LI>Date</LI>
+        <LI>Month</LI>
+        <LI>Week</LI>
+        <LI>Time</LI>
+        <LI>Datetime</LI>
+        <LI>Datetime-local</LI>
+        <LI>Search</LI>
+        <LI>Color</LI>
+    </UL>
+    <h3>Elementos que podem ser utilizados no interior do elemento formulário</h3>
+    <ul>
+        <li>Legendas</li>
+        <li>Campos</li>
+        <li>Botões</li>
+        <li>Agrupamentos</li>
+    </ul>
+    <h3>Controles de formulários</h3>
+    <ul>
+        <li>Imput</li>
+        <li>Buttom</li>
+        <li>Textarea</li>
+        <li>Legend</li>
+        <li>Label</li>
+        <li>Fieldset</li>
+        <li>Datalist</li>
+        <li>Keygen</li>
+        <li>Output</li>
+        <li>Select</li>
+        <li>Option</li>
+        <li>Optgroup</li>
+    </ul>
+    <h3>Exemplo 0 - tipo: input fora da label do nome</h3>
+    <div>
+        <form><p><label for="nome">Nome: </label><input id="nome"></p></form>
         <pre>
-            <code>
-                &lt;%
-                String n = request.getParameter("nome");
-                String t = request.getParameter("telefone");
-                %&gt;
-            </code>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&nbsp;for="nome"&gt;Nome:&nbsp;&lt;/label&gt;
+                    &lt;input&nbsp;id="nome"&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;           
         </pre>
-    </form>
-    <form name="formulario" action="recebe.jsp" method="GET">
-        <p><label>Nome: <input type="text" name="nome"></label></p>
-        <p><label>Telefone: <input type="tel" name="telefone" readonly value="55 11 95566-8976"></label></p>
-        <p><label>E-mail: <input type="email" name="email" readonly value="godoy@godoy.com.br"></label></p>
-        <p><label>Site: <input type="url" name="site" readonly value="http://www.godoy.com.br"></label></p>
-        <p><label>Nascimento: <input type="date" name="data_nasc" readonly value="1984/01/16"></label></p>
-        <p><input type="submit" value="enviar" name="botao"></p>
-        <p>Esse formulário traz alguns campos como somente leitura (readonly). É possível selecionar a informação, diferente do atributo disabled</label></p>
-    </form>
-    <form name="formulario" action="recebe.jsp" method="GET">
-        <p><label>Nome: <input type="text" name="nome" size="35"></label></p>
-        <p><label>Telefone: <input type="text" name="telefone" size="14"></label></p>
-        <p><label>Produto: <br>
-            <select name="produto" size="3">
-                <option value="tv">TV</option>
-                <option value="radio">Radio</option>
-                <option value="som">Som</option>
-                <option value="impressora">Impressora</option>
-            </select>        
-        </label></p>
-        <p><input type="submit" value="Enviar"></p>
-        <p>No atributo input o size determina a quantidade de caracteres na tela.<br> No atributo select o size determina quantas linhas ficarão visíveis</p>
-    </form>
-    <form name="formulario" action="recebe.jsp" method="GET">
-        <p><label>Nome: <input type="text" name="nome" size="30"></label>
-        <input type="image" src="botao.png" alt="enviar" width="25"></p>
-        <p>O atributo src especifica o URL de de um arquivo para mostrar em um elemento</p>
-    </form>
-    <fieldset id="form_grande">
-        <legend>O atributo type</legend>
-        <form name="formulario" action="recebe" method="POST">
-            <label><input type="hidden" name="formulario" value="cadastro"></label>
-            <p><label>Usuário: <input type="text" name="usuario"></label>
-                <label>Senha: <input type="password" name="senha"></label></p>
-            <p><label>Telefone: <input type="tel" name="telefone"></label>
-                <label>E-mail: <input type="email" name="email"></label></p>
-            <p><label>Website: <input type="url" name="site"></label></p>
-            <p><label>Data de nascimento: <input type="date" name="data_nasc"></label>
-                <label>Hora do nascimento: <input type="time" name="hora_nasc"></label>
-                <label>Semana: <input type="week" name="semana"></label></p>
-            <p><label>Faixa etária: <input type="range" name="idade" min="18" max="80" step="1"></label></p>
-            <p><label>Cor dos olhos <input type="color" name="cor_olhos"></label>
-                <label>Foto: <input type="file" name="foto"></label></p>
-            <fieldset>
-                <legend>Estado civil</legend>
-                <p><label><input type="radio" name="est_civ" value="casado">Casado</label>
-                <label><input type="radio" name="est_civ" value="solteiro">Solteiro</label></p>
-            </fieldset>
-            <fieldset>
-                <legend>Produtos</legend>
-                <p><label><input type="checkbox" name="computador" value="Computador">Computador</label></p>
-                <p><label><input type="checkbox" name="monitor" value="Monitor">Monitor</label></p>
-            </fieldset>
-            <p><label>Cartão de crédito: <input type="number" name="cartao_credito"></label>
-                <label>Validade do cartão: <input type="month" name="validade_cartao"></label></p>
-            <p><label>Data/hora da entrega (UTC): <input type="datetime" name="dat_hor_entrega"></label></p>
-            <p><label>Data/hora da entrega (LOCAL): <input type="datetime-local" name="dat_hor_entrega_local"></label></p>
-            <p><label>Valor a ser pesquisado: <input type="search" name="pesquisa"></label></p>
-            <p id="botoes_form">
-                <input type="button" value="Validar" onclick="alert('Clicou no botão');">
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpar">
-                <input type="image" src="botao.png" alt="Enviar" width="30">
+    </div>
+    <h3>Exemplo 1 - tipo data, input dentro da label da data</h3>
+    <div>
+        <form><p><label for="data">Data: <input type="date", name="data"></label></p></form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&nbsp;for="data"&gt;Data:&nbsp;&lt;input&nbsp;type="date",&nbsp;name="data"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 2</h3>
+    <div>
+        <form><p><label for="tel">Telefone:  <input type="tel" required></label></p></form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&nbsp;for="tel"&gt;Telefone: &nbsp;&lt;input&nbsp;type="tel" required&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 3</h3>
+    <div>
+        <form>
+            <p>
+                <label>Telefone: <input type="tel" 
+                        placeholder="(XX) XXXXX-XXXX"
+                        pattern="(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})">
+                </label>
             </p>
         </form>
-    </fieldset>
-    <form name="formulario" action="recebe.jsp" method="POST">
-        <p><label><input type="hidden" name="formulario" value="cadastro"></label></p>
-        <p><label>Foto: <input type="file" name="foto"></label></p>
-        <fieldset>
-            <legend>Estado civil</legend>
-            <p><label><input type="radio" name="est_civ" value="Casado">Casado</label>
-            <label><input type="radio" name="est_civ" value="Solteiro">Solteiro</label></p>
-        </fieldset>
-        <fieldset>
-            <legend>Produtos</legend>
-            <p><label><input type="checkbox" name="computador" value="Computador">Computador</label></p>
-            <p><label><input type="checkbox" name="monitor" value="Monitor">Monitor</label></p>
-        </fieldset>
-        <p><input type="button" value="Validar" onclick="alert('Enviamos o formulário');"></p>
-    </form>
-    <form name="formulario3" action="recebe3.jsp" method="POST">
-        <p><label>Nome: <input type="text" name="nome" accesskey="n" autofocus></label></p>
-        <p><label>Telefone: <input type="tel" name="telefone" accesskey="t"></label></p>
-        <p><input type="submit" value="Enviar"></p>
-        <p>Para acessar o campo nome pressione ALT + n; campo telefone: ALT + t. Atributo accesskey.</p>
-    </form>
-    <form name="formulario4" action="recebe4.jsp" method="POST">
-        <p><label>Nome: <input type="text" name="nome" class="campo"></label></p>
-        <p><label>Telefone: <input type="tel" name="telefone" class="campo"></label></p>
-        <p><label>E-mail: <input type="email" name="email"></label></p>
-        <p><input type="button" value="Validar" onclick="alert('Clicou no botão');"></p>
-        <p>Configuração do CSS feita com o atributo class</p>
-    </form>
-    <form name="formulario5" action="recebe5.jsp" method="POST">
-        <p><label>Nome: <input type="text" name="nome" dir="ltr"></label></p>
-        <p><label>Telefone: <input type="tel" name="telefone" dir="rtl"></label></p>
-        <p><input type="submit" value="Enviar"></p>
-        <p>Nome possui "rtl": right to left e Telefone "ltr": Left to right</p>
-    </form>
-    <form name="formulario6" action="recebe6.jsp" method="POST">
-        <p><label>Nome: <input type="text" name="nome" lang="pt-BR"></label></p>
-        <p><label>Endereço: <input type="text" name="endereco" lang="en"></label></p>
-        <p><input type="submit" value="Enviar"></p>
-        <p>O campo nome possui o atributo lang="pt-BR", o Endereço: "en". Não há validação pra esse atributo</p>
-    </form>
-    <form name="formulario7" action="recebe7.jsp" method="POST">
-        <p><label>Nome: <input type="text" name="nome" lang="pt-BR" tabindex="3"></label></p>
-        <p><input type="submit" value="Enviar" style="background-color: #336699; color: #ffffff; font-family:tahoma; font-size: 15px; height: 30px; width: 115px"></p>
-        <p>Botão configurado em CSS direto no código HTML, atributo style</p>
-        <p>Tabindex 3</p>
-    </form>
-    <form name="formulario8" action="recebe8.jsp" method="POST">
-        <p><label>Nome: <input type="text" name="nome" title="Nome do cliente" tabindex="4"></label></p>
-        <p><input type="submit" value="Enviar" title="Submeter o formulário"></p>
-    </form>
-    <script type="text/javascript">
-        function teste2 () {
-            alert('Deixou o campo');
-        }
-    </script>
-    <form name="formulario9" action="recebe9.jsp" method="POST">
-        <p><label>Nome: <input type="text" name="nome" onblur="teste2();"></label></p>
-        <p><label>Endereço: <input type="submit" value="Enviar"></label></p>
-        <p>onblur: Chama um script quando o campo perde o foco</p>
-    </form>
-    <script type="text/javascript">
-        function teste3 () {
-            alert('O campo foi modificado');
-        }
-    </script>
-    <form> 
-        <p><label>Endereço: <input type="text" name="cidade" value="Jandira" onchange="teste3();"></label></p>
-        <p>Atributo onchange: ao sair de um campo alterado chama um script</p>
-    </form>
-    <script type="text/javascript">
-        function teste4 () {
-            alert('Clicou no botão');
-        }
-    </script>
-    <form>
-        <p><input type="button" value="Clique aqui" onclick="teste4();"></p>
-        <p>onclick: Um script é executado ao clicar o botão</p>
-    </form>
-    <script type="text/javascript">
-        function teste5 () {
-            alert('Não é permitido alterar esses dados');
-        }
-    </script>
-    <form>
-        <p><label>Documento: <input type="number" name="numerodocto" oninput="teste5();"></label></p>
-        <p>oninput: executa um scrit ao alterar qualquer dado do campo</p>
-    </form>
-    <script type="text/javascript">
-        function teste6 () {
-            alert('Deu duploclique no botão');
-        }
-    </script>
-    <form action="recebe11.jsp">
-        <p><input type="button" value="Clique aqui" ondblclick="teste6 ();"></p>
-        <p>Atributo ondblclick: executa um script ao dar duploclique no botão.</p>
-    </form>
-    <script type="text/javascript">
-        function teste7 () {
-            alert('O campo cidade recebeu o foco');
-        }
-    </script>
-    <form name="formulario12" action="recebe12.jsp" method="POST">
-        <p><label>Nome: <input type="text" name="nome"></label></p>
-        <p><label>Cidade: <input type="text" name="cidade" onfocus="teste7();"></label></p>
-        <p><input type="submit" value="Mandar"></p>
-        <p>Atributo onfocus no input, executa um script ao receber o foco</p>
-    </form>
-    <script type="text/javascript">
-        function teste8 () {
-            alert('Algum botão do mouse foi clicado');
-        }
-    </script>
-    <script type="text/javascript">
-        function teste9 () {
-            alert('O botão do mouse foi solto');
-        }
-    </script>
-    <script type="text/javascript">
-        function teste10 () {
-            alert('O ponteiro do mouse passou sobre o campo cidade10')
-        }
-    </script>
-    <form>
-        <p><label>Cidade: <input type="text" name="cidade" onmousedown="teste8();" onmouseout="teste9 ();"></label></p>
-        <p>Atributos onmousedown e onmouseout</p>
-    </form>
-    <form>
-        <p><label>Cidade10: <input type="text" name="cidade" onmousemove="teste10();"></label></p>
-        <p>Atributo onmousemove</p>
-    </form>
-    <script type="text/javascript">
-        function teste11 () {
-            alert('O ponteiro do mouse foi afastado do campo')
-        }
-    </script>
-    <form>
-        <p><label>Cidade: <input type="text" name="cidade" onmouseover="teste11 ();"></label></p>
-        <p>Atributo onmouseover executa um script quando o ponteiro estiver sobre o controle</p>
-    </form>
-    <script type="text/javascript">
-        function test12 () {
-            alert('Tecla pressionada')
-        }
-    </script>
-    <form>
-        <p><label>Cidade: <input type="text" name="cidade" onkeypress="teste12();"></label></p>
-        <p>Atributo onkeypress, uma função será executada ao pressionar qualquer tecla </p>
-    </form>
-    <script type="text/javascript">
-        function teste13 () {
-            alert('Uma parte do formulário 13 foi selecionada')
-        }
-    </script>
-    <form>  
-        <legend>Formulário 13</legend>
-        <p><label>Nome: <input type="text" onselect="teste13 ();"></label></p>
-        <p><label>Cidade: <input type="text"></label></p>
-    </form>
-    <form>
-        <legend>Formulário 14</legend>
-        <p><label>Atributo Lang: Declare o idioma principal utilizado na página (ISO-639-1)</label></p>
-        <p>Declare no interior da tag html</p>
-    </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Telefone:&nbsp;&lt;input&nbsp;type="tel"&nbsp;
+                        placeholder="(XX)&nbsp;XXXXX-XXXX"
+                        pattern="(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})"&gt;
+                    &lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </PRe>
+    </div>
+    <h3>Exemplo 4</h3>
+    <div>
+        <form>
+            <p>
+                <label>E-mail: <input type="e-mail"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;E-mail:&nbsp;&lt;input&nbsp;type="e-mail"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 5</h3>
+    <div>
+        <form>
+            <p>
+                <label>Site: <input type="url"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Site: &nbsp;&lt;input&nbsp;type="url"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 6 - tipo number</h3>
+    <div>
+        <form>
+            <p>
+                <label>Nota: <input type="number" name="nota" min="0" max="10" step="0.5"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Nota:&nbsp;&lt;input&nbsp;type="number"&nbsp;name="nota"&nbsp;min="0"&nbsp;max="10"&nbsp;step="2"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 7 - tipo range</h3>
+    <div>
+        <form>
+            <p>
+                <label>Nota: <input type="range" name="volume" min="0" max="10" step="0.5"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Nota:&nbsp;&lt;input&nbsp;type="range"&nbsp;name="volume"&nbsp;min="0"&nbsp;max="10"&nbsp;step="2"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 8 - tipo data</h3>
+    <div>
+        <form>
+            <p>
+                <label>Data: <input type="date" name="data"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Data: &nbsp;&lt;input&nbsp;type="date"&nbsp;name="data"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 9 - tipo mês</h3>
+    <div>
+        <form>
+            <p>
+                <label>Mês: <input type="month" name="mês"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Mês: &nbsp;&lt;input&nbsp;type="month"&nbsp;name="mês"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 10 - tipo semana</h3>
+    <div>
+        <form>
+            <p>
+                <label>Semana: <input type="week" name="semana"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Semana: &nbsp;&lt;input&nbsp;type="week"&nbsp;name="semana"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 11 - tipo hora</h3>
+    <div>
+        <form>
+            <p>
+                <label>Hora: <input type="time" name="hora"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Hora: &nbsp;&lt;input&nbsp;type="time"&nbsp;name="hora"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 12 - tipo data-hora</h3>
+    <div>
+        <form>
+            <p>
+                <label>Data hora: <input type="datetime" name="data-hora"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Data hora: &nbsp;&lt;input&nbsp;type="datetime"&nbsp;name="data-hora"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 13 - tipo data-hora-local</h3>
+    <div>
+        <form>
+            <p>
+                <label>Data_hora_local: <input type="datetime-local" name="data-hora-local"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Data_hora_local: &nbsp;&lt;input&nbsp;type="datetime-local"&nbsp;name="data-hora-local"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 14 - tipo time com Step (intervalos de tempo - tempo não contínuo)</h3>
+    <div>
+        <form>
+            <p>
+                <label>Tempo de entrega do produto: <input type="time" name="timeComStep" min="19:00" max="23:00" step="300"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Tempo&nbsp;de&nbsp;entrega&nbsp;do&nbsp;produto:&nbsp;&lt;input&nbsp;type="time"&nbsp;name="timeComStep"&nbsp;min="19:00"&nbsp;max="23:00"&nbsp;step="300"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 15 - tipo hidden</h3>
+    <div>
+        <form>
+            <p>
+                <label><input type="hidden" name="formulário15" value="contato"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+                    &lt;label&gt;&lt;input&nbsp;type="hidden"&nbsp;name="formul&aacute;rio15"&nbsp;value="contato"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 16 - tipo password</h3>
+    <div>
+        <form method="POST">
+            <p>
+                <label>Senha: <input type="password" name="senha"></label>
+            </p>
+        </form>
+        <pre>
+            &lt;form&nbsp;method="POST"&gt;
+                &lt;p&gt;
+                    &lt;label&gt;Senha:&nbsp;&lt;input&nbsp;type="password"&nbsp;name="senha"&gt;&lt;/label&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <h3>Exemplo 17 - tipo file (arquivo)</h3>
+    <div>
+        <form>
+            <p>
+                <input type="file" name="imagem" accept="image/*" onchange="atualizarnomearquivo(this.value)">
+            </p>
+        </form>
+        <p><img src="#" alt="imagem" width="200" id="imagem"></p>
+    <pre>
+        &lt;form&gt;
+            &lt;p&gt;
+                &lt;input&nbsp;type="file"&nbsp;name="imagem"&nbsp;accept="image/*"&nbsp;onchange="atualizarnomearquivo(this.value)"&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+            &lt;p&gt;&lt;img&nbsp;src="#"&nbsp;alt="imagem"&nbsp;width="200"&nbsp;id="imagem"&gt;&lt;/p&gt;
+    </pre>
+    </div>
+    <h3>Exemplo 18 - Botões tipo submit, button e reset</h3>
+    <div>
+        <form action="teste.jsp" name="formulario18" method="post">
+            <p><label>Nome: <input type="text" name="pnome"></label></p>
+            <p><label>Sobrenome: <input type="text" name="snome"></label></p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="Limpar">
+            <input type="button" value="Validar Nome" onclick="validar();">
+        </form>
+    </div>
 
+    
+    <h3>Exemplo </h3>
+    <div>
+        <form>
+            <p>
+                
+            </p>
+        </form>
+        <pre>
+            &lt;form&gt;
+                &lt;p&gt;
+
+                &lt;/p&gt;
+            &lt;/form&gt;
+        </pre>
+    </div>
+    <div id="app">
+        <button onmouseover="mostraalerta()">Me pressione</button>
+    </div>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
